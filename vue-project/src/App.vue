@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+const name = 'vue dinamico'
+</script>
 
 <template>
-  <h1>Hola vue</h1>
+  <h1>Hola {{ name }}</h1>
 </template>
 
 <style>
