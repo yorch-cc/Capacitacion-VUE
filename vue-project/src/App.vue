@@ -1,14 +1,36 @@
 <script setup>
 const name = 'yorch'
-const arrayFrutas = ["🍎", "🍌", "🍉", "🍓", "🍒"];
+const arrayFrutas = [
+    {
+        name: "Manzana",
+        price: "$1.00",
+        description: "Una manzana",
+        stock: 0,
+    },
+    {
+        name: "Pera",
+        price: "$2.00",
+        description: "Una pera",
+        stock: 10,
+    },
+    {
+        name: "Naranja",
+        price: "$3.00",
+        description: "Una naranja",
+        stock: 20,
+    },
+];
+
 </script>
 
 <template>
   <h1>Hola {{ name.toUpperCase() }}</h1>
+
   <ul>
-    <li v-for="(fruta, index) in arrayFrutas":key="index">
-  {{index}}-{{ fruta  }}
-      </li>
+    <li v-if="value.stock > 0"v-for="value in arrayFrutas" :key="value">
+    {{ value.name }} - {{ value.price }} : {{ value }}>
+      
+    </li>
     </ul>
 
 
