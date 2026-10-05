@@ -13,3 +13,10 @@ const mascota = {
 console.log(mascota)
 console.log(mascota.razas[0])
 
+
+//destructuring objects
+
+const nombreMascota = mascota.nombre;
+const {edad, vivo} = mascota
+console.log(edad, vivo);
+
