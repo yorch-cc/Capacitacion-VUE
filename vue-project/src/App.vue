@@ -2,8 +2,8 @@
 const name = 'yorch'
 
 //metodo -- methods  
-const handleClick = () => {
-  console.log('missclick')
+const handleClick = (message) => {
+  console.log(message)
 
 }
 
@@ -12,8 +12,8 @@ const handleClick = () => {
 <template>
   <h1>Hola {{ name.toUpperCase() }}</h1>
 
-  <button v-on:click="handleClick">Activame 1</button>
-  <button @click="handleClick">Activame 2</button>
+  <button v-on:click="handleClick('click 1')">Activame 1</button>
+  <button @click="handleClick('click 2')">Activame 2</button>
 
 
   
