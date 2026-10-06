@@ -1,9 +1,12 @@
 <script setup>
+import {ref} from 'vue';
 const name = 'yorch'
+const counter = ref(0);  
 
-//metodo -- methods  
-const handleClick = (message) => {
-  console.log(message)
+const increment = () => {
+  console.log('aumentar contador')
+  counter.value++;
+ 
 
 }
 
@@ -11,17 +14,10 @@ const handleClick = (message) => {
 
 <template>
   <h1>Hola {{ name.toUpperCase() }}</h1>
-
-  <button v-on:click.right.prevent="handleClick('click right')">Activame right</button>
-  <button @click.left="handleClick('click left')">Activame left</button> 
-  <button @click.middle   ="handleClick('click middle')">Activame middle</button>
-
+  <h2>{{ counter   }}</h2>
+  <button @click ="increment">Aumentar</button>
 
   
-  
-    
-
-
 </template>
  
 <style>
