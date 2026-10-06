@@ -12,8 +12,9 @@ const handleClick = (message) => {
 <template>
   <h1>Hola {{ name.toUpperCase() }}</h1>
 
-  <button v-on:click="handleClick('click 1')">Activame 1</button>
-  <button @click="handleClick('click 2')">Activame 2</button>
+  <button v-on:click.right.prevent="handleClick('click right')">Activame right</button>
+  <button @click.left="handleClick('click left')">Activame left</button> 
+  <button @click.middle   ="handleClick('click middle')">Activame middle</button>
 
 
   
